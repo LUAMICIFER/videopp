@@ -12,7 +12,7 @@ def AdminRightsCheck(mystic):
     async def wrapper(_, message):
         if message.sender_chat:
             return await message.reply_text(
-                "You're an __Anonymous Admin__!\nRevert back to User Account."
+                "You're an __Anonymous Admin__!\n tell the administrator to give you 7 permission."
             )
         is_non_admin = await is_nonadmin_chat(message.chat.id)
         if not is_non_admin:
@@ -36,7 +36,7 @@ def AdminActual(mystic):
     async def wrapper(_, message):
         if message.sender_chat:
             return await message.reply_text(
-                "You're an __Anonymous Admin__!\nRevert back to User Account."
+                "You're an __Anonymous Admin__!\ntell the admin to give you 7 permission."
             )
         member = await app.get_chat_member(
             message.chat.id, message.from_user.id
