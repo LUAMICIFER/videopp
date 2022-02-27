@@ -72,7 +72,7 @@ async def initiate_bot():
         )
         for all_module in ALL_MODULES:
             imported_module = importlib.import_module(
-                "Yukki.Plugins." + all_module
+                "Advik.Plugins." + all_module
             )
             if (
                 hasattr(imported_module, "__MODULE__")
@@ -94,22 +94,22 @@ async def initiate_bot():
             status="[bold blue]Importation Completed!",
         )
     console.print(
-        "[bold green]Congrats!! Yukki Music Bot has started successfully!\n"
+        "[bold green]Congrats!! Advik Music Bot has started successfully!\n"
     )
     try:
         await app.send_message(
             LOG_GROUP_ID,
-            "<b>Congrats!! Music Bot has started successfully!</b>",
+            "<b>Congrats!! Advik Music Bot has started successfully!</b>",
         )
     except Exception as e:
         print(
-            "\nBot has failed to access the log Channel. Make sure that you have added your bot to your log channel and promoted as admin!"
+            "\nAdvik music Bot has failed to access the log Channel. Make sure that you have added your Advik music bot to your log channel and promoted as admin!"
         )
         console.print(f"\n[red]Stopping Bot")
         return
     a = await app.get_chat_member(LOG_GROUP_ID, BOT_ID)
     if a.status != "administrator":
-        print("Promote Bot as Admin in Logger Channel")
+        print("Promote Advik music Bot as Admin in Logger Channel")
         console.print(f"\n[red]Stopping Bot")
         return
     console.print(f"\n┌[red] Bot Started as {BOT_NAME}!")
@@ -127,8 +127,8 @@ async def initiate_bot():
             console.print(f"\n[red]Stopping Bot")
             return
         try:
-            await ASS_CLI_1.join_chat("OfficialYukki")
-            await ASS_CLI_1.join_chat("YukkiSupport")
+            await ASS_CLI_1.join_chat("Fun-tastic four")
+            await ASS_CLI_1.join_chat("choti baby")
         except:
             pass
         console.print(f"├[red] Assistant 1 Started as {ASSNAME1}!")
@@ -143,11 +143,11 @@ async def initiate_bot():
             print(
                 "\nAssistant Account 2 has failed to access the log Channel. Make sure that you have added your Assistant to your log channel and promoted as admin!"
             )
-            console.print(f"\n[red]Stopping Bot")
+            console.print(f"\n[red]Stopping Advik music Bot")
             return
         try:
-            await ASS_CLI_2.join_chat("OfficialYukki")
-            await ASS_CLI_2.join_chat("YukkiSupport")
+            await ASS_CLI_2.join_chat("fun-tastis four")
+            await ASS_CLI_2.join_chat("choti baby")
         except:
             pass
         console.print(f"├[red] Assistant 2 Started as {ASSNAME2}!")
@@ -165,8 +165,8 @@ async def initiate_bot():
             console.print(f"\n[red]Stopping Bot")
             return
         try:
-            await ASS_CLI_3.join_chat("OfficialYukki")
-            await ASS_CLI_3.join_chat("YukkiSupport")
+            await ASS_CLI_3.join_chat("Fan-tastic four")
+            await ASS_CLI_3.join_chat("choti baby")
         except:
             pass
         console.print(f"├[red] Assistant 3 Started as {ASSNAME3}!")
@@ -226,7 +226,7 @@ async def initiate_bot():
             await LOG_CLIENT.join_chat("YukkiSupport")
         except:
             pass
-    console.print(f"└[red] Yukki Music Bot Boot Completed.")
+    console.print(f"└[red] Advik Music Bot Boot Completed.")
     if STRING1 != "None":
         await pytgcalls1.start()
     if STRING2 != "None":
@@ -324,6 +324,7 @@ async def start_command(_, message):
                 link = result["link"]
                 published = result["publishedTime"]
             searched_text = f"""
+Advik music bot presents:
 🔍__**Video Track Information**__
 
 ❇️**Title:** {title}
@@ -334,7 +335,7 @@ async def start_command(_, message):
 🎥**Channel Name:** {channel}
 📎**Channel Link:** [Visit From Here]({channellink})
 🔗**Video Link:** [Link]({link})
-
+**Owner:** Advik
 ⚡️ __Searched Powered By {BOT_NAME}__"""
             key = InlineKeyboardMarkup(
                 [
@@ -383,7 +384,7 @@ async def start_command(_, message):
         umention = f"[{sender_name}](tg://user?id={int(sender_id)})"
         return await LOG_CLIENT.send_message(
             LOG_GROUP_ID,
-            f"{message.from_user.mention} has just started Bot.\n\n**USER ID:** {sender_id}\n**USER NAME:** {sender_name}",
+            f"{message.from_user.mention} has just started Advik music Bot.\n\n**USER ID:** {sender_id}\n**USER NAME:** {sender_name}",
         )
     return
 
